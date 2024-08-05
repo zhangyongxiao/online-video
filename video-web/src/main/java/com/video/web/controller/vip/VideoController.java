@@ -32,7 +32,7 @@ public class VideoController {
     @GetMapping("blockReading")
     public void BlockReading(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.reset();
-        File file = new File("I:\\电影\\幽灵鬼屋\\幽灵鬼屋.Haunted.Mansion.2023.HD1080P.官方中字.霸王龙压制组T-Rex.mp4");
+        File file = new File("F:\\video\\雷米奇遇记-2018_蓝光国法双语中字.mp4");
         long fileLength = file.length();
 // 随机读文件
         RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");

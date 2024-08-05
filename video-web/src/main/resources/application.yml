@@ -72,7 +72,32 @@ spring:
     restart:
       # 热部署开关
       enabled: true
-
+#邮箱配置
+#平台地址，这里用的是qq邮箱，使用其他邮箱请更换
+  mail:
+    host: smtp.qq.com
+    protocol: smtp
+    #端口号
+    port: 465
+    #发送邮件的邮箱地址：改成自己的邮箱
+    username: 1055148679@qq.com
+    #发送短信后它给你的授权码 填写到这里
+    password: kupefiqyrrjfbbfa
+    #与发件邮箱一致
+    from: 1055148679@qq.com
+    properties: # 配置以SSL的方式发送, 这个需要使用这种方式并且端口是465
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            socketFactory:
+              class: com.sun.mail.util.MailSSLSocketFactory
+              fallback: false
+        debug: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
 # MyBatis
 mybatis:
   # 搜索指定包别名
