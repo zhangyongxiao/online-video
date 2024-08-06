@@ -1,5 +1,6 @@
 package com.video.web.controller.vip;
 
+import com.video.common.annotation.Anonymous;
 import com.video.common.core.domain.entity.EmailSend;
 import com.video.common.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class RegisterController extends BaseController
 
 
     @GetMapping("/register")
+    @Anonymous
     public String register()
     {
         return "register";
@@ -37,6 +39,7 @@ public class RegisterController extends BaseController
 
     @PostMapping("/register")
     @ResponseBody
+    @Anonymous
     public AjaxResult ajaxRegister(MemberRegister user)
     {
         String msg = registerService.register(user);
@@ -45,6 +48,7 @@ public class RegisterController extends BaseController
 
     @PostMapping("sendEmail")
     @ResponseBody
+    @Anonymous
     public AjaxResult sendEmail(@RequestBody @Validated EmailSend emailSend){
 
         emailService.sendSimpleMail(emailSend.getEmail(),"注册验证码","验证码");
