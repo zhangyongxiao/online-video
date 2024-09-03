@@ -1,9 +1,14 @@
 package com.video.web.controller.vip;
 
 import com.video.common.utils.StringUtils;
+import com.video.system.domain.VideoOrder;
+import com.video.system.service.VideoOderService;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,10 +16,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
+import java.util.List;
 
 @Controller
 @Log4j2
 public class VideoController {
+
 
 
     @GetMapping("detail")

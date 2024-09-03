@@ -48,13 +48,15 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
         <!-- 核心模块-->
         <dependency>
             <groupId>com.video</groupId>
             <artifactId>video-framework</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.video</groupId>
+            <artifactId>video-system</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
