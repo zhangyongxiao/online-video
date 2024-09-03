@@ -150,19 +150,25 @@
 		<!-- START THE FEATURETTES -->
 
 		<hr class="featurette-divider">
-		<#list videoList as video>
-			<div class="row featurette">
-				<div class="col-md-7">
-					<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-					<p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-				</div>
-				<div class="col-md-5">
-					<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-				</div>
+		<div class="row featurette" th:each="video,videState : ${videoList}">
+			<div class="col-md-7" th:if="${(videState.index+1)%2 == 0}">
+				<h2 class="featurette-heading" th:text="${video.videoName}">First featurette heading. <span class="text-muted" ></span></h2>
+				<p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
 			</div>
-			<hr class="featurette-divider">
-		</#list>
+			<div class="col-md-5" th:if="${(videState.index+1)%2 == 0}">
+				<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+			</div>
+			<div class="col-md-7 order-md-2" th:if="${(videState.index+1)%2 == 1}">
+				<h2 class="featurette-heading" th:text="${video.videoName}">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+				<p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+			</div>
+			<div class="col-md-5 order-md-1" th:if="${(videState.index+1)%2 == 1}">
+				<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+			</div>
+		</div>
+		<hr class="featurette-divider">
 
 
 		<!--<div class="row featurette">
