@@ -72,4 +72,28 @@ public class IndexController extends BaseController
         modelAndView.addObject("videoList", list);
         return modelAndView;
     }
+
+    @GetMapping("profile-settings")
+    public ModelAndView profileSettings(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("profile-settings");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
+
+    @GetMapping("profile-video")
+    public ModelAndView profileVideo(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("profile-video");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
+
+    @GetMapping("submit-post")
+    public ModelAndView submitPost(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("submit-post");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
 }

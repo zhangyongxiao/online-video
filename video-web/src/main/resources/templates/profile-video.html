@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="en"  xmlns:th="http://www.thymeleaf.org">
+<div th:replace="~{common/head::head}"></div>
+<body>
+<div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <!--header-->
+        <div th:replace="~{common/common::leftMenus}"></div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div th:replace="~{common/common::centerHead}"></div>
+            <!-- End Header -->
+            <!--breadcrumbs-->
+            <!--<section id="breadcrumb">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <nav aria-label="You are here:" role="navigation">
+                            <ul class="breadcrumbs">
+                                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                                <li><a href="profile-page-v2.html">profile</a></li>
+                                <li>
+                                    <span class="show-for-sr">Current: </span> my videos
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>--><!--end breadcrumbs-->
+
+            <!-- profile top section -->
+            <div th:replace="~{common/profile::banner}"></div>
+            <!-- End profile top section -->
+            <div class="row">
+                <!-- left sidebar -->
+                <div th:replace="~{common/profile::leftSideBar}"></div>
+                <!-- end sidebar -->
+                <!-- right side content area -->
+                <div class="large-8 columns profile-inner">
+                    <!-- single post description -->
+                    <section class="profile-videos">
+                        <div class="row secBg">
+                            <div class="large-12 columns">
+                                <div class="heading">
+                                    <i class="fa fa-video-camera"></i>
+                                    <h4>My Videos</h4>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-video">
+                                    <div class="media-object stack-for-small">
+                                        <div class="media-object-section media-img-content">
+                                            <div class="video-img">
+                                                <img src="http://placehold.it/170x150" alt="video thumbnail">
+                                            </div>
+                                        </div>
+                                        <div class="media-object-section media-video-content">
+                                            <div class="video-content">
+                                                <h5><a href="#">There are many variations of passage.</a></h5>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore .</p>
+                                            </div>
+                                            <div class="video-detail clearfix">
+                                                <div class="video-stats">
+                                                    <span><i class="fa fa-check-square-o"></i>published</span>
+                                                    <span><i class="fa fa-clock-o"></i>5 January 16</span>
+                                                    <span><i class="fa fa-eye"></i>1,862K</span>
+                                                </div>
+                                                <div class="video-btns">
+                                                    <a class="video-btn" href="#"><i class="fa fa-pencil-square-o"></i>edit</a>
+                                                    <a class="video-btn" href="#"><i class="fa fa-trash"></i>delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-more-inner text-center">
+                                    <a href="#" class="show-more-btn">show more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!-- End single post description -->
+                </div><!-- end left side content area -->
+            </div>
+
+            <!-- footer -->
+            <!-- footer -->
+            <div th:replace="~{common/common::copy}"></div>
+        </div><!--end off canvas content-->
+    </div><!--end off canvas wrapper inner-->
+</div><!--end off canvas wrapper-->
+<!-- script files -->
+<div th:replace="~{common/script::scriptFiles}"></div>
+</body>
+</html>
