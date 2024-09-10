@@ -35,4 +35,41 @@ public class IndexController extends BaseController
         return modelAndView;
 
     }
+
+    @GetMapping("single-video")
+    public ModelAndView singleVideo(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("single-video");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+
+    }
+    @GetMapping("login-register")
+    public ModelAndView loginRegister(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("login-register");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
+    @GetMapping("login-video")
+    public ModelAndView loginVideo(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("login-video");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
+    @GetMapping("about-us")
+    public ModelAndView aboutUs(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("about-us");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
+    @GetMapping("contact-us")
+    public ModelAndView contactUs(){
+        List<VideoOrder> list = videoOderService.listVideOrder();
+        ModelAndView modelAndView = new ModelAndView("contact-us");
+        modelAndView.addObject("videoList", list);
+        return modelAndView;
+    }
 }

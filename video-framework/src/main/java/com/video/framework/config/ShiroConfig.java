@@ -295,6 +295,13 @@ public class ShiroConfig
         filterChainDefinitionMap.put("/index", "anon");
         filterChainDefinitionMap.put("/detail", "anon");
         filterChainDefinitionMap.put("/blockReading", "anon");
+        filterChainDefinitionMap.put("/bootstrap/**", "anon");
+
+        filterChainDefinitionMap.put("/single-video", "anon");
+        filterChainDefinitionMap.put("/login-register", "anon");
+        filterChainDefinitionMap.put("/login-video", "anon");
+        filterChainDefinitionMap.put("/about-us", "anon");
+        filterChainDefinitionMap.put("/contact-us", "anon");
         // 匿名访问不鉴权注解列表
         List<String> permitAllUrl = SpringUtils.getBean(PermitAllUrlProperties.class).getUrls();
         if (StringUtils.isNotEmpty(permitAllUrl))
